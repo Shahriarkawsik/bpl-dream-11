@@ -14,7 +14,15 @@ export default {
         'color1.6': 'rgba(19, 19, 19,0.6)',
         'color1.4': 'rgba(19, 19, 19,0.4)',
         'color2' : 'rgb(231, 254, 41)',
+        'color3' : 'rgb(255, 255, 255)',
+        'color3.7' : 'rgba(255, 255, 255,0.7)',
+      },
+      fontSize:{
+        '40': "40px"
       }
+      // backgroundImage:{
+      //   'banner': "url('./src/assets/image/bg-shadow.png')"
+      // }
     },
   },
   plugins: [],
