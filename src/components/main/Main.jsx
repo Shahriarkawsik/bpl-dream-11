@@ -3,13 +3,11 @@ import Available from "../available/Available";
 import Selected from "../Selected/Selected";
 
 const Main = () => {
-  // const [toggle,setToggle] = useState("Available") 
   const [toggle,setToggle] = useState({
     button: "Available",
     Available: true
+  }); 
 
-  }) 
-  console.log(toggle.button);
   const handleToggle = (btn) => {
     if(btn === "Available"){
       setToggle({

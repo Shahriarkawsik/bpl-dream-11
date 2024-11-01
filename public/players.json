@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Babar Azam",
+    "team": "Pakistan",
+    "img": "https://api.bdcrictime.com/babar-azam-17_03_2022.jpg",
+    "role": "Batsman",
+    "batting_style": "Right handed",
+    "price": 500000
+  },
+  {
+    "id": 2,
+    "name": "Ben Stokes",
+    "team": "England",
+    "img": "https://onecricketnews.akamaized.net/parth-editor/oc-dashboard/news-images-prod/1712057455394_ben_stokes_england_t20_world_cup.jpg",
+    "role": "Allrounder",
+    "batting_style": "Left handed",
+    "price": 300000
+  },
+  {
+    "id": 3,
+    "name": "Brandon King",
+    "team": "West Indies",
+    "img": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1280,q_80/lsci/db/PICTURES/CMS/389400/389463.jpg",
+    "role": "Batsman",
+    "batting_style": "Right handed",
+    "price": 400000
+  },
+  {
+    "id": 4,
+    "name": "David Warner",
+    "team": "Australia",
+    "img": "https://crictoday.com/wp-content/uploads/2023/02/warner_player_of_the_tournamen_0_1200x768-1-1.jpg",
+    "role": "Batsman",
+    "batting_style": "Left handed",
+    "price": 500000
+  },
+  {
+    "id": 5,
+    "name": "Harry Brook",
+    "team": "England",
+    "img": "https://www.hindustantimes.com/ht-img/img/2024/10/10/550x309/Pakistan-Enlgand-Cricket-64_1728551997684_1728552035344.jpg",
+    "role": "Batsman",
+    "batting_style": "Right handed",
+    "price": 200000
+  },
+  {
+    "id": 6,
+    "name": "Joe Root",
+    "team": "England",
+    "img": "https://static.independent.co.uk/2023/10/14/18/311de6d7b9a1879b71b41de578d19a87Y29udGVudHNlYXJjaGFwaSwxNjk3MzgzMzAy-2.73987452.jpg?quality=75&width=1250&crop=3%3A2%2Csmart&auto=webp",
+    "role": "Batsman",
+    "batting_style": "Right handed",
+    "price": 100000
+  },
+  {
+    "id": 7,
+    "name": "Mahmudullah",
+    "team": "Bangladesh",
+    "img": "https://api.bdcrictime.com/riyad--30_09_2022.jpg",
+    "role": "Allrounder",
+    "batting_style": "Right handed",
+    "price": 400000
+  },
+  {
+    "id": 8,
+    "name": "Moeen Ali",
+    "team": "England",    
+    "img": "https://api.bdcrictime.com/moeen-ali-13_06_2022.jpg",
+    "role": "Allrounder",
+    "batting_style": "Left handed",
+    "price": 300000
+  },
+  {
+    "id": 9,
+    "name": "Shaheen Afridi",
+    "team": "Pakistan",
+    "img": "https://www.hindustantimes.com/ht-img/img/2023/10/13/550x309/India-Cricket-WCup-153_1697216288586_1697216309506.jpg",
+    "role": "Bowler",
+    "batting_style": "Left handed",
+    "price": 500000
+  },
+  {
+    "id": 10,
+    "name": "Shakib Al Hasan",
+    "team": "Bangladesh",
+    "img": "https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-fq2f46coeob6d96l5fgv3dla02-20190618175255.Medi.jpeg",
+    "role": "Allrounder",
+    "batting_style": "Left handed",
+    "price": 300000
+  },
+  {
+    "id": 11,
+    "name": "Tamim Iqbal",
+    "team": "Bangladesh",
+    "img": "https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2021/05/30/tamim_iqbal.jpg",
+    "role": "Batsman",
+    "batting_style": "Left handed",
+    "price": 500000
+  },
+  {
+    "id": 12,
+    "name": "Hashim Amla",
+    "team": "South Africa",
+    "img": "https://wallpapercave.com/wp/wp7977373.jpg",
+    "role": "Batsman",
+    "batting_style": "Right handed",
+    "price": 200000
+  }
+]
