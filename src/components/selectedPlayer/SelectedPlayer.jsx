@@ -10,8 +10,8 @@ const SelectedPlayer = ({selectedPlayer}) => {
       <div className="flex items-center gap-3">
         <img className="w-14 h-14 rounded-full" src={img} alt="" />
         <div>
-          <h2 className="text-2xl font-semibold leading-7">{name}</h2>
-          <p>{batting_style}</p>
+          <h2 className="text-base lg:text-2xl font-semibold leading-7">{name}</h2>
+          <p className="max-sm:text-xs sm:text-base">{batting_style}</p>
         </div>
       </div>
       <RiDeleteBin6Line />

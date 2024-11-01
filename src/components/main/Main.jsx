@@ -26,7 +26,9 @@ const Main = () => {
   const [selectedPlayers,setSelectedPlayers] = useState([]);
 
   function handleSelectedPlayer (choosedPlayer){
-    setSelectedPlayers([...selectedPlayers,choosedPlayer]);
+    if(selectedPlayers.length <= 5){
+      setSelectedPlayers([...selectedPlayers,choosedPlayer]);
+    }
   }
   console.log(selectedPlayers);
   return (
@@ -44,7 +46,8 @@ const Main = () => {
       </div>
       </div>
       {
-        (toggle.button === "Available") ? <Available handleSelectedPlayer={handleSelectedPlayer}></Available> : <SelectedPlayers selectedPlayers={selectedPlayers}></SelectedPlayers>
+        (toggle.button === "Available") ? <Available         
+        handleSelectedPlayer={handleSelectedPlayer}></Available> : <SelectedPlayers selectedPlayers={selectedPlayers}></SelectedPlayers>
       }
       
     </main>

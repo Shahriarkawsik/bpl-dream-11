@@ -2,9 +2,11 @@ import PropTypes from "prop-types";
 import { FaUserAlt } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa";
 
-const Player = ({player,handleSelectedPlayer}) => {
 
+const Player = ({player,handleSelectedPlayer}) => {
+  // let totalPlayer = selectedPlayers.length;
   const {img,name,team,role,batting_style,price} = player;
+  // console.log(selectedPlayers.length);
   return (
     <div className="h-fit p-3 sm:p-6 border border-color1.1 rounded-xl space-y-3">
       <img className="w-full h-64 border rounded-lg" src={img} alt="" />
@@ -26,8 +28,8 @@ const Player = ({player,handleSelectedPlayer}) => {
         <p className="text-color1.7 leading-5">{batting_style}</p>
       </div>
       <div className="flex justify-between items-center">
-        <h3 className="text-color1 font-semibold leading-5">Price: ${price}</h3>
-        <button onClick={() => handleSelectedPlayer(player)} className="text-color1 rounded-lg px-4 py-2 border border-color1.1">Choose Player</button>
+        <h3 className="text-color1 font-semibold leading-5">Price: ${price}</h3>        
+        <button onClick={() => handleSelectedPlayer(player)} className="text-color1 rounded-lg px-3 sm:px-4 py-2 border border-color1.1">Choose Player</button>
       </div>
 
     </div>
@@ -35,6 +37,8 @@ const Player = ({player,handleSelectedPlayer}) => {
 };
 Player.propTypes = {
   player: PropTypes.object.isRequired,
-  handleSelectedPlayer: PropTypes.object.isRequired
+  handleSelectedPlayer: PropTypes.func.isRequired,
+  selectedPlayers: PropTypes.array.isRequired
+
 }
 export default Player;

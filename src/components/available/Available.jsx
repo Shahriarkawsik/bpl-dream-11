@@ -17,6 +17,7 @@ const Available = ({handleSelectedPlayer}) => {
         players.map(player => <Player key={player.id}
            player={player}
            handleSelectedPlayer={handleSelectedPlayer}
+           
            ></Player>)
       }
     </div>
@@ -24,6 +25,6 @@ const Available = ({handleSelectedPlayer}) => {
 };
 
 Available.propTypes = {  
-  handleSelectedPlayer: PropTypes.object.isRequired,
+  handleSelectedPlayer: PropTypes.object.isRequired,  
 }
 export default Available;
