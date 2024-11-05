@@ -2,8 +2,11 @@ const Subscribe = () => {
   return (
     <div className="space-y-3">
       <h1 className="font-semibold text-xl text-white leading-6">Subscribe</h1>
-      <p className="max-w-72 text-xs text-slate-200">
+      {/* <p className="max-w-72 text-xs text-slate-200">
         Subscribe to our newsletter for the latest updates.
+      </p> */}
+      <p className="text-color3.7 leading-6 max-sm:text-justify sm:w-full lg:w-11/12">
+      Subscribe to our newsletter for the latest updates.
       </p>
       <div className="flex">
         <input
