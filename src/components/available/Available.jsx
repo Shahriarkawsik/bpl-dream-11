@@ -26,5 +26,6 @@ const Available = ({handleSelectedPlayer}) => {
 
 Available.propTypes = {  
   handleSelectedPlayer: PropTypes.object.isRequired,  
+  players: PropTypes.array.isRequired,  
 }
 export default Available;

@@ -5,7 +5,8 @@ import SubscribeSection from "../subscribe-section/SubscribeSection";
 import  PropTypes  from 'prop-types';
 import { Alert } from "../alerts/Alert";
 
-const Main = ({handleBuyPlayer,addCredit}) => {
+const Main = ({handleBuyPlayer,addCredit,players}) => {
+
   const [toggle,setToggle] = useState({
     button: "Available",
     Available: true
@@ -27,10 +28,9 @@ const Main = ({handleBuyPlayer,addCredit}) => {
     }
   };
   const [selectedPlayers,setSelectedPlayers] = useState([]);
-
+// Conditional checking
   function handleSelectedPlayer (choosedPlayer){
     const {name,price}=choosedPlayer;
-    //check have available balance
     if(price > addCredit ){
       Alert(false, "Not enough money to buy this player.Claim some Credit");
     } else if(selectedPlayers.includes(choosedPlayer)){
@@ -44,6 +44,13 @@ const Main = ({handleBuyPlayer,addCredit}) => {
       Alert(true, `Congrates!! ${name} is now in tour squad.`);
     }
   }
+  // Remove selected player
+  const handleDeleteSelectedPlayers = (id) => {
+    setSelectedPlayers((players) =>
+      players.filter((player) => player.id !== id)
+    );
+    Alert(true, "Player removed!");
+  };
   return (
     <main className='w-10/12 sm:w-10/12 lg:w-4/5 mx-auto mt-12  space-y-10'>
       <div className="flex justify-between items-center">      
@@ -59,7 +66,12 @@ const Main = ({handleBuyPlayer,addCredit}) => {
       </div>      
       {
         (toggle.button === "Available") ? <Available         
-        handleSelectedPlayer={handleSelectedPlayer}></Available> : <SelectedPlayers selectedPlayers={selectedPlayers}></SelectedPlayers>
+        handleSelectedPlayer={handleSelectedPlayer}
+        players={players}
+        ></Available> : <SelectedPlayers 
+        selectedPlayers={selectedPlayers}
+        handleDeleteSelectedPlayers={handleDeleteSelectedPlayers}
+        ></SelectedPlayers>
       } 
       <div className="rounded-lg relative h-80">
         <SubscribeSection/>
@@ -70,6 +82,7 @@ const Main = ({handleBuyPlayer,addCredit}) => {
 Main.propTypes ={
   addCredit: PropTypes.number.isRequired,
   handleBuyPlayer: PropTypes.func.isRequired,
+  players: PropTypes.array.isRequired,
 }
 
 export default Main;

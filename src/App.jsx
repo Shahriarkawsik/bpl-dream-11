@@ -3,7 +3,7 @@ import Header from './components/Header/Header'
 import Main from './components/main/Main'
 // import PropTypes from 'prop-types';
 import { Alert } from "./components/alerts/Alert";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 function App() {
@@ -14,6 +14,16 @@ function App() {
     SetAddCredit(addCredit + 10000000);
     Alert(true, "Coins added!");      
   }
+
+    /*----------------------*/
+    const [players,setPlayers] = useState([]);
+    
+    useEffect(() => {
+      fetch('/players.json')
+      .then(responses => responses.json())
+      .then(data => setPlayers(data))
+    },[]) 
+    /*----------------------*/ 
   const handleBuyPlayer = (price) => SetAddCredit((addCredit) => addCredit - price); //এটা choose player থেকে আসবে ।
   return (
     <>
@@ -24,6 +34,8 @@ function App() {
       <Main 
       addCredit={addCredit}
       handleBuyPlayer={handleBuyPlayer}
+      players={players}
+
       ></Main>      
       <Footer></Footer>
     </>

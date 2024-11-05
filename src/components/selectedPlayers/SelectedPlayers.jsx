@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import SelectedPlayer from "../selectedPlayer/SelectedPlayer";
 
-const SelectedPlayers = ({selectedPlayers}) => {
+const SelectedPlayers = ({selectedPlayers,handleDeleteSelectedPlayers}) => {
 
   return (
     <div className="space-y-4">
@@ -9,6 +9,7 @@ const SelectedPlayers = ({selectedPlayers}) => {
         selectedPlayers.map((selectedPlayer) => <SelectedPlayer 
         key={selectedPlayer.id}
         selectedPlayer={selectedPlayer}
+        handleDeleteSelectedPlayers={handleDeleteSelectedPlayers}
         ></SelectedPlayer>)
       }
       <div className='border border-color1 inline-block p-2 rounded-xl sm:rounded-2xl'>
@@ -20,5 +21,6 @@ const SelectedPlayers = ({selectedPlayers}) => {
 };
 SelectedPlayers.propTypes = {
   selectedPlayers: PropTypes.array.isRequired, 
+  handleDeleteSelectedPlayers: PropTypes.array.isRequired, 
 }
 export default SelectedPlayers;

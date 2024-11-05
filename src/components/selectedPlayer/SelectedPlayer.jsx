@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
-const SelectedPlayer = ({selectedPlayer}) => {
+const SelectedPlayer = ({selectedPlayer,handleDeleteSelectedPlayers}) => {
 
-    const {img,name,batting_style} = selectedPlayer;
+    const {img,name,batting_style,id} = selectedPlayer;
 
   return (
     <div className="border p-4 flex justify-between items-center rounded-xl">
@@ -14,7 +14,9 @@ const SelectedPlayer = ({selectedPlayer}) => {
           <p className="max-sm:text-xs sm:text-base">{batting_style}</p>
         </div>
       </div>
+      <button onClick={() => handleDeleteSelectedPlayers(id)}>
       <RiDeleteBin6Line />
+      </button>
     </div>
   );
 };
