@@ -2,7 +2,7 @@ import shadow from '../../assets/image/bg-shadow.png'
 const SubscribeSection = () => {
   return (
     <div
-      className="absolute w-full h-80 top-2/4 left-0 right-0 flex flex-col items-center justify-center space-y-3 rounded-lg outline outline-offset-[8px] outline-2 outline-white text-center"
+      className="absolute w-full h-80 top-2/4 left-0 right-0 flex flex-col items-center justify-center space-y-3 rounded-lg outline outline-offset-[8px] outline-2 outline-white text-center border"
       style={{        
         backgroundImage: `url(${shadow})`,
         backgroundSize: "100% 100%",
