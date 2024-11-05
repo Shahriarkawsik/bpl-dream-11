@@ -2,9 +2,10 @@ import { useState } from "react";
 import Available from "../available/Available";
 import SelectedPlayers from "../selectedPlayers/selectedPlayers";
 import SubscribeSection from "../subscribe-section/SubscribeSection";
+import  PropTypes  from 'prop-types';
+import { Alert } from "../alerts/Alert";
 
-
-const Main = () => {
+const Main = ({handleBuyPlayer,addCredit}) => {
   const [toggle,setToggle] = useState({
     button: "Available",
     Available: true
@@ -28,11 +29,21 @@ const Main = () => {
   const [selectedPlayers,setSelectedPlayers] = useState([]);
 
   function handleSelectedPlayer (choosedPlayer){
-    if(selectedPlayers.length <= 5){
+    const {name,price}=choosedPlayer;
+    //check have available balance
+    if(price > addCredit ){
+      Alert(false, "Not enough money to buy this player.Claim some Credit");
+    } else if(selectedPlayers.includes(choosedPlayer)){
+      Alert(false, "Player already selected");
+    } else if(selectedPlayers.length > 5){
+      Alert(false, "Squad is full!");
+    }else{
       setSelectedPlayers([...selectedPlayers,choosedPlayer]);
+      handleBuyPlayer(price);
+      // Alert(true, "Successfully brought!");
+      Alert(true, `Congrates!! ${name} is now in tour squad.`);
     }
   }
-  console.log(selectedPlayers);
   return (
     <main className='w-10/12 sm:w-10/12 lg:w-4/5 mx-auto mt-12  space-y-10'>
       <div className="flex justify-between items-center">      
@@ -56,5 +67,9 @@ const Main = () => {
     </main>
   );
 };
+Main.propTypes ={
+  addCredit: PropTypes.number.isRequired,
+  handleBuyPlayer: PropTypes.func.isRequired,
+}
 
 export default Main;

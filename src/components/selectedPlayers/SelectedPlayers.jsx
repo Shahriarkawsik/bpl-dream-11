@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-
 import SelectedPlayer from "../selectedPlayer/SelectedPlayer";
 
 const SelectedPlayers = ({selectedPlayers}) => {

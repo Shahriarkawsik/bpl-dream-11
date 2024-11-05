@@ -29,7 +29,7 @@ const Player = ({player,handleSelectedPlayer}) => {
       </div>
       <div className="flex justify-between items-center">
         <h3 className="text-color1 font-semibold leading-5">Price: ${price}</h3>        
-        <button onClick={() => handleSelectedPlayer(player)} className="text-color1 rounded-lg px-3 sm:px-4 py-2 border border-color1.1">Choose Player</button>
+        <button onClick={() => handleSelectedPlayer(player)} className="text-color1 rounded-lg px-3 sm:px-4 py-2 border border-color1.1 hover:bg-color2">Choose Player</button>
       </div>
 
     </div>

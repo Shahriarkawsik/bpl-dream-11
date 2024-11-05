@@ -2,8 +2,7 @@ import crick from '../../assets/image/banner-main.png';
 import banner from '../../assets/image/bg-shadow.png';
 import PropTypes from 'prop-types';
 
-const Banner = ({handleAddCredit}) => {
-  
+const Banner = ({handleAddCredit}) => {  
 
   return (
     <section className="w-full text-center space-y-3 sm:space-y-4 lg:space-y-6 max-sm:p-6 sm:px-6 sm:py-10 lg:py-20 rounded-3xl"
@@ -19,6 +18,7 @@ const Banner = ({handleAddCredit}) => {
       <div className='border border-color2 inline-block p-2 rounded-2xl'>
         <button onClick={handleAddCredit} 
         className='bg-color2 px-5 py-4 rounded-xl text-color1 font-bold sm:text-xl'>Claim Free Credit</button>
+
       </div>
 
       
