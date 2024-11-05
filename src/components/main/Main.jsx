@@ -12,6 +12,12 @@ const Main = ({handleBuyPlayer,addCredit,players}) => {
     Available: true
   }); 
 
+  const handleAvailablePlayersSection = () => {
+    setToggle({
+      button: "Available",
+      Available: true    
+    })
+  }
   const handleToggle = (btn) => {
     if(btn === "Available"){
       setToggle({
@@ -40,7 +46,6 @@ const Main = ({handleBuyPlayer,addCredit,players}) => {
     }else{
       setSelectedPlayers([...selectedPlayers,choosedPlayer]);
       handleBuyPlayer(price);
-      // Alert(true, "Successfully brought!");
       Alert(true, `Congrates!! ${name} is now in tour squad.`);
     }
   }
@@ -71,6 +76,7 @@ const Main = ({handleBuyPlayer,addCredit,players}) => {
         ></Available> : <SelectedPlayers 
         selectedPlayers={selectedPlayers}
         handleDeleteSelectedPlayers={handleDeleteSelectedPlayers}
+        handleAvailablePlayersSection={handleAvailablePlayersSection}
         ></SelectedPlayers>
       } 
       <div className="rounded-lg relative h-80">
