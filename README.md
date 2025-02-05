@@ -2,9 +2,10 @@
 
 ## live link:
 
-- [@Github link](https://github.com/programming-hero-web-course1/b10a7-dream-11-Shahriarkawsik)
+- [@PH Github link](https://github.com/programming-hero-web-course1/b10a7-dream-11-Shahriarkawsik)
+- [@Github link](https://github.com/Shahriarkawsik/bpl-dream-11)
 - [@Surge live link](https://eatable-teaching.surge.sh/)
-
+- [@Netlify live link](https://shahriarkawsik-dream-11.netlify.app/)
 
 ## Description
 
@@ -31,4 +32,3 @@ BPL Dream-11 is a website where top cricketers are available based on their pric
 2. Show some top cricketers
 
 3. Add them as selected, and remove if needed
-
